@@ -143,37 +143,48 @@
 
 
   /* === MOBILE STYLES === */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
 
-    .left, .right {
-      width: 100%;
-      height: auto;
-    }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 
-    .divider {
-      display: none;
-    }
+  .left, .right {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
 
-    .right {
-      font-size: 1.6rem;
-      padding: 12px;
-    }
+  .divider {
+    display: none;
+  }
 
-    .left {
-      font-size: 1.3rem;
-      padding: 12px;
-    }
+  .left {
+    order: 2; /* וידאוים יורדים למטה */
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
 
-    .image-row {
-      flex-direction: column;
-    }
+  .right {
+    order: 1; /* טקסטים ותמונות קודם */
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
 
-    .image-half {
-      width: 100%;
-    }
+  .image-row {
+    flex-direction: column;
+  }
+
+  .image-half {
+    width: 100%;
+  }
+
+  .text-block,
+  .text-caption {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}
   /* === MOBILE STYLES === */
 
 
