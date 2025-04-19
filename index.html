@@ -42,7 +42,7 @@
       box-sizing: border-box;
       color: white;
       text-align: right;
-      font-size: 2.4rem; /* increased font size */
+      font-size: 2.4rem;
       line-height: 1.6;
     }
     iframe {
@@ -63,6 +63,19 @@
     audio::-webkit-media-controls-panel {
       background-color: black;
     }
+    .image-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .image-half {
+      width: 50%;
+      cursor: pointer;
+    }
+    .image-half img {
+      width: 100%;
+      height: auto;
+    }
     .image-block {
       margin-bottom: 20px;
       cursor: pointer;
@@ -74,6 +87,12 @@
     .text-block {
       margin-bottom: 40px;
       color: white;
+    }
+    .text-caption {
+      color: white;
+      font-size: 1.8rem;
+      margin-top: 10px;
+      margin-bottom: 40px;
     }
     .overlay {
       position: fixed;
@@ -111,13 +130,27 @@
     </div>
     <div class="divider"></div>
     <div class="right">
+      <div class="image-row">
+        <div class="image-half"><img src="1.jpg" alt="1"></div>
+        <div class="image-half"><img src="2.jpg" alt="2"></div>
+      </div>
+      <div class="image-row">
+        <div class="image-half"><img src="3.jpg" alt="3"></div>
+        <div class="image-half"><img src="4.jpg" alt="4"></div>
+      </div>
+      <div class="image-row">
+        <div class="image-half"><img src="5.jpg" alt="5"></div>
+        <div class="image-half"><img src="6.jpg" alt="6"></div>
+      </div>
       <div class="text-block">
         העימות החזיתי בין הרווארד לממשל טראמפ יוצר חוסר ודאות עמוק לגבי עתיד המוסד וכבר מוביל לקיצוצים ופיטורים ברחבי הקמפוס. אך למרות זאת, ההחלטה של הנהלת האוניברסיטה שלא להיענות לדרישות מרחיקות הלכת של הממשל שינתה באחת את אווירת הנכאים ששררה במהלך השבועות הארוכים של העימות. בתקופה שקדמה להחלטה, היה נדמה כי הרווארד עומדת ללכת בדרכה של אוניברסיטת קולומביה ולהיכנע לדרישות הממשל כדי לא לאבד מיליארדי דולרים של מימון פדרלי למחקר.
         <br><br>
         בניגוד לתדמית הרדיקלית שיש לאוניברסיטה בישראל מאז מתקפת 7 באוקטובר, הרווארד ידועה בארה"ב כמוסד שמרני בבסיסו שמעניק חינוך לדורות של אילי הון, עורכי דין, ואנשי ציבור מהזרם המרכזי, וקשור בטבורו למוקדי הכוח הכלכליים והפוליטיים החזקים ביותר. בשנה האקדמית הנוכחית הנהלת האוניברסיטה עשתה מאמץ מרוכז להשתיק את המחאה השנויה במחלוקת נגד מדיניות ישראל בעזה על ידי איסור גורף של הפגנות בתוך הקמפוס, כולל איסור על כתיבה בגיר על מדרכות.
       </div>
-      <div class="image-block"><img src="https://via.placeholder.com/600x200" alt="Placeholder"></div>
-      <div class="text-block">"האור נוגע בקצה – כמו זיכרון שלא התרחש"</div>
+      <div class="image-block">
+        <img src="7.jpg" alt="7">
+      </div>
+      <div class="text-caption">הוראס סילבר וארט בלייקי, שנות החמישים</div>
     </div>
   </div>
 
@@ -126,7 +159,7 @@
   </div>
 
   <script>
-    const images = document.querySelectorAll('.image-block img');
+    const images = document.querySelectorAll('.image-block img, .image-half img');
     const overlay = document.getElementById('overlay');
     const overlayImg = document.getElementById('overlay-img');
     let currentIndex = 0;
