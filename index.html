@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Split Slideshow</title>
+  <title>HARDBOP</title>
   <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@700&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -84,15 +84,12 @@
       width: 100%;
       height: auto;
     }
-    .text-block {
-      margin-bottom: 40px;
-      color: white;
-    }
+    .text-block,
     .text-caption {
-      color: white;
-      font-size: 1.8rem;
-      margin-top: 10px;
       margin-bottom: 40px;
+      color: white;
+      font-size: 2.4rem;
+      line-height: 1.6;
     }
     .overlay {
       position: fixed;
@@ -108,8 +105,9 @@
       z-index: 1000;
     }
     .overlay img {
-      max-height: 100%;
-      max-width: 100%;
+      height: 100vh;
+      width: auto;
+      object-fit: contain;
     }
   </style>
 </head>
