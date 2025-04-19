@@ -15,6 +15,24 @@
       overflow: hidden;
       font-family: 'David Libre', serif;
     }
+
+/* עיצוב ל-Chrome, Edge, ו-Safari */
+.left::-webkit-scrollbar,
+.right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left::-webkit-scrollbar-track,
+.right::-webkit-scrollbar-track {
+  background: black; /* צבע הרקע של הגלילה */
+}
+
+.left::-webkit-scrollbar-thumb,
+.right::-webkit-scrollbar-thumb {
+  background-color: white; /* צבע ה"ידית" */
+  border-radius: 4px;
+}
+
     .container {
       display: flex;
       height: 100vh;
